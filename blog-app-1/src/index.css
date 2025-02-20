@@ -3,5 +3,5 @@
 /*Header Stuff */
 
 .header-subtitles {
-  @apply min-w-[5vw] max-w-[10vw] md:min-w-[15vw] md:max-w-[25vw] flex justify-center items-center;
+  @apply min-w-[5vw] max-w-[10vw] md:min-w-[10vw] md:max-w-[25vw] flex justify-center items-center;
 }

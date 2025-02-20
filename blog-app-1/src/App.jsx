@@ -2,22 +2,22 @@ import { useState } from "react";
 import Home from "./Components/Home.jsx";
 import "./App.css";
 import Header from "./Components/Header.jsx";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import AddBlog from "./Components/AddBlog.jsx";
+
 function App() {
-  const [count, setCount] = useState(0);
-
-  const fetchAPI = async () => {
-    const response = await axios.get("http://localhost:3000/");
-  };
-
   return (
-    <>
-      <div className="grid h-[2000px] w-screen grid-cols-3 grid-rows-[5%_auto]">
-        <div className="flex justify-center col-span-3">
-          <Header></Header>
+    <Router>
+      <div className="grid h-[2000px] w-screen grid-cols-5 grid-rows-[5%_auto]">
+        <div className="flex justify-center col-span-5">
+          <Header />
         </div>
-        <Home></Home>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add" element={<AddBlog />} />
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 }
 

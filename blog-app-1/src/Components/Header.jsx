@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 function Header() {
   const [expanded, setExpanded] = useState(false);
   useEffect(() => {
@@ -22,8 +23,17 @@ function Header() {
       transition={{ duration: 0.5 }}
     >
       <motion.div className="header-subtitles">w</motion.div>
-      <motion.div className="header-subtitles">w</motion.div>
-      <motion.div className="header-subtitles">w</motion.div>
+      <div className="header-subtitles gap-[35px] mr-[20px]">
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+        <Link to="/add">
+          <button>Add Blog</button>
+        </Link>
+        <Link to="/signin">
+          <button>Sign in</button>
+        </Link>
+      </div>
     </motion.div>
   );
 }
