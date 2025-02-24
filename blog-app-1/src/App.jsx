@@ -4,7 +4,6 @@ import "./App.css";
 import Header from "./Components/Header.jsx";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AddBlog from "./Components/AddBlog.jsx";
-
 function App() {
   return (
     <Router>

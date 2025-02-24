@@ -23,14 +23,10 @@ function Home() {
           <p>No blogs available. Add one!</p>
         ) : (
           blogs.map((blog) => (
-            <Link
-              key={blog.id}
-              to={`/blog/${blog.id}`}
-              className="block border p-2 my-2"
-            >
+            <div className="border flex flex-col gap-[5px]">
               <h2 className="font-bold text-lg">{blog.title}</h2>
               <p>{blog.description}</p>
-            </Link>
+            </div>
           ))
         )}
       </div>

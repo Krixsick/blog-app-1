@@ -28,19 +28,19 @@ function AddBlog() {
         <input
           className="border"
           {...register("title", { required: "title is required" })}
-          placeholder="Title"
+          placeholder="Write the Title"
         />
 
         <input
           {...register("description", {
-            required: "descrption is required",
+            required: "description is required",
           })}
-          placeholder="description"
+          placeholder="Write your description"
         />
         <input
           className="border"
           {...register("body", { required: "body is required" })}
-          placeholder="body"
+          placeholder="Write the body"
         />
         <button type="submit">Submit</button>
       </form>
